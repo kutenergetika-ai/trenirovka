@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <title>Тренировка</title>
+  <meta name="description" content="Офлайн-приложение для тренировок: план упражнений по дням недели." />
+
+  <meta name="theme-color" content="#0D1117" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Тренировка" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="icon" href="assets/icons/icon-32.png" />
+  <link rel="manifest" href="manifest.json" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="install-banner" class="install-banner">
+    <span>Чтобы приложение работало офлайн: нажмите <strong>Поделиться</strong> → <strong>На экран «Домой»</strong></span>
+    <button data-dismiss class="icon-btn small">✕</button>
+  </div>
+
+  <main id="view-outlet" class="view-outlet"></main>
+
+  <nav class="bottom-nav">
+    <button class="nav-btn" data-nav="#/today">
+      <span class="nav-icon">●</span>
+      <span>Сегодня</span>
+    </button>
+    <button class="nav-btn" data-nav="#/plan">
+      <span class="nav-icon">▦</span>
+      <span>План</span>
+    </button>
+    <button class="nav-btn" data-nav="#/library">
+      <span class="nav-icon">▤</span>
+      <span>Библиотека</span>
+    </button>
+    <button class="nav-btn" data-nav="#/history">
+      <span class="nav-icon">◴</span>
+      <span>История</span>
+    </button>
+  </nav>
+
+  <div id="modal-root" class="modal-root"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
