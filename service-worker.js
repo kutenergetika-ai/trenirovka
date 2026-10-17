@@ -26,6 +26,9 @@ const PRECACHE_URLS = [
   "./assets/icons/icon-512-maskable.png",
   "./assets/icons/apple-touch-icon.png",
   "./assets/exercises/chest-cable-crossover.jpg",
+  "./assets/exercises/arms-seated-curl.jpg",
+  "./assets/exercises/arms-standing-dumbbell-curl.jpg",
+  "./assets/exercises/back-dumbbell-row.jpg",
 ];
 
 self.addEventListener("install", (event) => {
