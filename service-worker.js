@@ -1,7 +1,8 @@
-// Простой offline-first service worker. При изменении файлов — поднимите CACHE_VERSION,
-// чтобы у пользователей обновился кэш.
+// Service worker: "сначала интернет, потом кэш". При наличии сети всегда отдаётся
+// самая свежая версия с сервера (и попутно обновляется кэш); офлайн — последняя
+// сохранённая копия. При изменении списка файлов — поднимите CACHE_VERSION.
 
-const CACHE_VERSION = "trn-v1";
+const CACHE_VERSION = "trn-v2";
 
 const PRECACHE_URLS = [
   "./",
@@ -66,16 +67,13 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET" || !req.url.startsWith(self.location.origin)) return;
 
   event.respondWith(
-    caches.match(req).then((cached) => {
-      const network = fetch(req)
-        .then((res) => {
-          if (res && res.status === 200) {
-            caches.open(CACHE_VERSION).then((cache) => cache.put(req, res.clone()));
-          }
-          return res;
-        })
-        .catch(() => cached);
-      return cached || network;
-    })
+    fetch(req)
+      .then((res) => {
+        if (res && res.status === 200) {
+          caches.open(CACHE_VERSION).then((cache) => cache.put(req, res.clone()));
+        }
+        return res;
+      })
+      .catch(() => caches.match(req))
   );
 });
