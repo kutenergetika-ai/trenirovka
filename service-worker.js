@@ -44,6 +44,7 @@ const PRECACHE_URLS = [
   "./assets/exercises/legs-squat.jpg",
   "./assets/exercises/legs-leg-press.jpg",
   "./assets/exercises/legs-lunge.jpg",
+  "./assets/exercises/arms-wrist-pronation.jpg",
 ];
 
 self.addEventListener("install", (event) => {
