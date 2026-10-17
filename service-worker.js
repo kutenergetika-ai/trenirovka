@@ -29,6 +29,20 @@ const PRECACHE_URLS = [
   "./assets/exercises/arms-seated-curl.jpg",
   "./assets/exercises/arms-standing-dumbbell-curl.jpg",
   "./assets/exercises/back-dumbbell-row.jpg",
+  "./assets/exercises/chest-bench-press.jpg",
+  "./assets/exercises/chest-dumbbell-press.jpg",
+  "./assets/exercises/chest-pushup.jpg",
+  "./assets/exercises/chest-fly.jpg",
+  "./assets/exercises/chest-dips.jpg",
+  "./assets/exercises/chest-incline-press.jpg",
+  "./assets/exercises/chest-pec-deck.jpg",
+  "./assets/exercises/back-lat-pulldown.jpg",
+  "./assets/exercises/back-pullup.jpg",
+  "./assets/exercises/back-one-arm-row.jpg",
+  "./assets/exercises/back-hyperextension.jpg",
+  "./assets/exercises/legs-squat.jpg",
+  "./assets/exercises/legs-leg-press.jpg",
+  "./assets/exercises/legs-lunge.jpg",
 ];
 
 self.addEventListener("install", (event) => {
